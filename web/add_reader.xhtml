@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+        PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core" xml:lang="en" lang="en">
+<h:head>
+    <title>Dodaj czytelnika</title>
+</h:head>
+<h:body>
+    <h:form>
+        <h:panelGroup>
+            <h:panelGrid columns="2">
+                <h:outputLabel for="titleInput">Imie: </h:outputLabel>
+                <h:inputText value="#{userModule.readerEntity.name}" id="titleInput" required="true"/>
+
+                <h:outputLabel for="surnameInput">Nazwisko: </h:outputLabel>
+                <h:inputText value="#{userModule.readerEntity.surname}" id="surnameInput" required="true"/>
+
+                <h:commandButton value="Utwórz konto" action="#{userModule.saveReader}" />
+            </h:panelGrid>
+        </h:panelGroup>
+    </h:form>
+</h:body>
+</html>

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+<title>Biblioteka</title>
+   <f:view>
+      <h2>Biblioteka</h2>
+
+      <h:form>
+         <h3>Dodawanie:</h3>
+         <h:commandButton action = "add_book" value = "Dodaj książkę" /> <br/>
+         <h:commandButton action = "add_author" value = "Dodaj autora" /> <br/>
+         <h:commandButton action = "add_reader" value = "Utwórz konto" />
+         <h3>Przeglądanie:</h3>
+         <h:commandButton action = "browse_books" value = "Przejrzyj książki" /> <br/>
+         <h:commandButton action = "browse_borrowing" value = "Przejrzyj wypożyczenia" />
+         <h3>Wypożyczanie</h3>
+         <h:commandButton action = "borrow" value = "Wypożycz książkę" />
+      </h:form>
+
+   </f:view>
+</html>

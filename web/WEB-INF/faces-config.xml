@@ -1,0 +1,32 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<faces-config version="2.2" xmlns="http://xmlns.jcp.org/xml/ns/javaee"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee 
+    http://xmlns.jcp.org/xml/ns/javaee/web-facesconfig_2_2.xsd">
+
+    <navigation-rule>
+        <from-view-id>/add_book.xhtml</from-view-id>
+        <navigation-case>
+            <from-action>#{bookModule.saveBook}</from-action>
+            <to-view-id>/index.xhtml</to-view-id>
+            <redirect/>
+        </navigation-case>
+    </navigation-rule>
+
+    <navigation-rule>
+        <from-view-id>/add_reader.xhtml</from-view-id>
+        <navigation-case>
+            <from-action>#{userModule.addReader}</from-action>
+            <to-view-id>/index.xhtml</to-view-id>
+            <redirect/>
+        </navigation-case>
+    </navigation-rule>
+    <navigation-rule>
+        <from-view-id>/borrow.xhtml</from-view-id>
+        <navigation-case>
+            <from-action>#{borrowingBean.addBorrowing}</from-action>
+            <to-view-id>/index.xhtml</to-view-id>
+        </navigation-case>
+    </navigation-rule>
+
+</faces-config>

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+        PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core" xmlns:p="http://primefaces.org/ui" xml:lang="en" lang="pl">
+<h:head>
+    <title>Przejrzyj wypożyczenia</title>
+</h:head>
+<body>
+
+<p:dataTable id="table" var="borrow" value="#{borrowModule.allBorrowings}">
+    <p:column headerText="Czytelnik">
+        <h:outputText value="#{borrow.reader.name}  #{borrow.reader.surname}" />
+    </p:column>
+
+    <p:column headerText="Tytuł">
+        <h:outputText value="#{borrow.book.title}" />
+    </p:column>
+
+    <p:column headerText="Data wypożyczrnia">
+        <h:outputText value="#{borrow.borrowingDate}" />
+    </p:column>
+
+    <p:column headerText="Data zwrotu">
+        <h:outputText value="#{borrow.returningDate}" />
+    </p:column>
+</p:dataTable>
+
+</body>
+</html>
